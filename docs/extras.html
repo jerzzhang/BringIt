@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Signup Modal</title>
+  <meta name="description" content="Remodal example">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../js/jquery.remodal.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="remodal-bg">
+  <a href="#modal2">Click</a>
+</div>
+
+<div data-remodal-id="modal2">
+	<h1>Extras &amp; Sides</h1>
+	<br>
+	<form method="post" action="#">
+		<div class="section group">
+		<div id="special-side">Would You Like To Add A Side?</div>
+			<div class="col span_1_of_2">
+				<div class="6u$ 12u$(small)">
+					<input type="checkbox" id="copy" name="copy">
+					<label for="copy">Shoestring Fries<span id="xprice">+3.00</span></label>
+				</div>
+			</div>
+			<div class="col span_1_of_2">
+				<div class="6u$ 12u$(small)">
+					<input type="checkbox" id="copy" name="copy">
+					<label for="copy">Sweet Potato Fries<span id="xprice">+3.00</span></label>
+				</div>
+			</div>
+		</div>
+		<div class="section group">
+			<div class="col span_1_of_2">
+				<div class="6u$ 12u$(small)">
+					<input type="checkbox" id="copy" name="copy">
+					<label for="copy">Shoestring Fries<span id="xprice">+3.00</span></label>
+				</div>
+			</div>
+			<div class="col span_1_of_2">
+				<div class="6u$ 12u$(small)">
+					<input type="checkbox" id="copy" name="copy">
+					<label for="copy">Sweet Potato Fries<span id="xprice">+3.00</span></label>
+				</div>
+			</div>
+		</div>
+		<div class="section group">
+			<div class="col span_1_of_2">
+				<div class="6u$ 12u$(small)">
+					<input type="checkbox" id="copy" name="copy">
+					<label for="copy">Shoestring Fries<span id="xprice">+3.00</span></label>
+				</div>
+			</div>
+			<div class="col span_1_of_2">
+				<div class="6u$ 12u$(small)">
+					<input type="checkbox" id="copy" name="copy">
+					<label for="copy">Sweet Potato Fries<span id="xprice">+3.00</span></label>
+				</div>
+			</div>
+			<div id="special-side">Extras</div>
+			<div class="col span_1_of_2">
+				<div class="6u 12u$(small)">
+					<input type="radio" id="priority-normal" name="priority">
+					<label for="priority-normal">Fried kale</label>
+				</div>
+			</div>
+			<div class="col span_1_of_2">
+				<div class="6u$ 12u$(small)">
+					<input type="radio" id="priority-high" name="priority">
+					<label for="priority-high">Pickled cat</label>
+				</div>
+			</div>
+			<div class="4u$">
+			<div id="special-q">Special Instructions</div>
+				<textarea name="message" id="instructions" placeholder="e.g. dressing on the side" rows="4"></textarea>
+			</div>
+		</div>
+  	</form>
+ 	<div class="12u$">
+		<ul class="actions">
+			<li><input type="submit" value="Add to Cart" class="special" /></li>
+		</ul>
+	</div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
+<script src="../js/jquery.remodal.js"></script>
+
+<!-- Events -->
+<script>
+  $(document).on("open", ".remodal", function () {
+    console.log("open");
+  });
+
+  $(document).on("opened", ".remodal", function () {
+    console.log("opened");
+  });
+
+  $(document).on("close", ".remodal", function (e) {
+    console.log('close' + (e.reason ? ", reason: " + e.reason : ''));
+  });
+
+  $(document).on("closed", ".remodal", function (e) {
+    console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+  });
+
+  $(document).on("confirm", ".remodal", function () {
+    console.log("confirm");
+  });
+
+  $(document).on("cancel", ".remodal", function () {
+    console.log("cancel");
+  });
+ var inst = $("[data-remodal-id=modal2]").remodal();
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Confirm Modal</title>
+  <meta name="description" content="Remodal example">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../js/jquery.remodal.css">
+</head>
+<body>
+<div class="remodal-bg">
+  <a href="#modal2">Click</a>
+</div>
+
+<div data-remodal-id="modal2">
+  <h1>Place order</h1>
+  <p>
+    <span id="my-order">MY ORDER</span>
+  </p>
+  <p>
+    <div id="item1">California roll <span id="item-price">$7.50</span></div>
+  </p>
+  <p>
+    <div id="total">TOTAL <span id="total-price">$7.50</span></div>
+  </p>
+  <br>
+  <a class="remodal-cancel" href="#">CONFIRM ORDER</a>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../js/jquery.min.js"><\/script>')</script>
+<script src="../../js/jquery.remodal.js"></script>
+
+<!-- Events -->
+<script>
+  $(document).on("open", ".remodal", function () {
+    console.log("open");
+  });
+
+  $(document).on("opened", ".remodal", function () {
+    console.log("opened");
+  });
+
+  $(document).on("close", ".remodal", function (e) {
+    console.log('close' + (e.reason ? ", reason: " + e.reason : ''));
+  });
+
+  $(document).on("closed", ".remodal", function (e) {
+    console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+  });
+
+  $(document).on("confirm", ".remodal", function () {
+    console.log("confirm");
+  });
+
+  $(document).on("cancel", ".remodal", function () {
+    console.log("cancel");
+  });
+ var inst = $("[data-remodal-id=modal2]").remodal();
+</script>
+</body>
+</html>

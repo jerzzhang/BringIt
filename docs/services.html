@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="../css/ie/html5shiv.js"></script><![endif]-->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery.scrolly.min.js"></script>
+		<script src="../js/skel.min.js"></script>
+		<script src="../js/skel-layers.min.js"></script>
+		<script src="../js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="../css/skel.css" />
+			<link rel="stylesheet" href="../css/admin.css" />
+			<link rel="stylesheet" href="../css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="../css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header-admin">
+				<h1><a href="index.html">OneStop</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a class="admin-name" href="#">Welcome, Rahim!</a></li>
+						<li class="special">
+							<a href="#" id="my-favorites-button" class="skel-layers-include" data-action="toggleLayer" data-args="menuPanel">Favorite Orders</a>
+							<div id="menuPanel-content">
+								<table class="alt">
+								<thead>
+									<tr>
+										<th>&nbsp;</th>
+										<th>Service</th>
+										<th>Item Name</th>
+										<th>Price</th>
+										<th>Quantity</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>x</td>
+										<td>Food Factory</td>
+										<td>Food Choice</td>
+										<td>29.99</td>
+										<td>
+											<form id='myform' method='POST' action='#'>
+												<input type='button' value='-' class='qtyminus' field='quantity'>
+    											<input type='text' name='quantity' value='0' class='qty'>
+    											<input type='button' value='+' class='qtyplus' field='quantity'>
+											</form>
+										</td>
+									</tr>
+								</tbody>
+								</table>
+								<ul class="actions vertical">
+									<li><a href="#" class="button place">Place Order</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<div id="orderContainer">
+				<div id="adminItems">
+					<div id="adminSelections">
+						<ul>
+							<li>History</li>
+							<li>settings</li>
+						</ul>
+					</div>
+				</div>
+				<div id="adminPanel">
+					<div id="admin-services">
+						<span id="service-title">Service Name</span>
+						<div id="service-options">
+							<div id="service-select">
+                        	    <select>
+                        	        <option value="1">Change Service</option>
+                        	    </select>
+                        	</div>
+                        	<div id="addService">+ Add Service</div>
+                        </div>
+					</div>
+					<br><br>
+					<div id="service-container">
+						<div id="service-info">
+							<div id="general-info">General info</div>
+							<div id="general-actions">
+								<div id="general-select">
+                        	    	<input type="text" placeholder="Service Name">
+                        		</div>
+                        		<div id="active-check">
+                        			<input type="checkbox" id="active" name="active">
+									<label for="active">Active</label>
+                        		</div>
+                        		<div id="placement-select">
+                        	    	<select>
+                        	    	    <option value="1">Service placement</option>
+                        	    	</select>
+                        		</div>
+                        		<br><br>
+                        		<div id="general-info">Subcategories</div>
+                        		<div class="section group">
+									<div class="col gen_1_of_3">
+										<span id="cat-name">Test</span><br>
+										<img src="../images/sushi-love.png">
+									</div>
+									<div class="col gen_1_of_3">
+										<span id="cat-name">Test</span><br>
+										<img src="../images/tgi.jpg">
+									</div>
+									<div class="col gen_1_of_3">
+										<span id="cat-name">Test</span><br>
+										<img src="../images/food-factory.jpg">
+									</div>
+								</div>
+								<br>
+								<div class="section group">
+									<div class="col gen_1_of_3">
+										<span id="cat-name">Test</span><br>
+										<img src="../images/sushi-love.png">
+									</div>
+									<div class="col gen_1_of_3">
+										<span id="cat-name">Test</span><br>
+										<img src="../images/tgi.jpg">
+									</div>
+									<div class="col gen_1_of_3">
+										<span id="cat-name">Test</span><br>
+										<img src="../images/food-factory.jpg">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="service-delete">Delete service</div>
+						<div id="service-save">Save service</div>
+					</div>
+				</div>
+			<footer>
+				<div id="footerLinks">
+					<a href="#">about</a>
+					<a href="#">terms</a>
+					<a href="#">help</a>
+					<a href="#">jobs</a>
+					<a href="#">press</a>
+				</div>
+				<div id="footerCopyright">
+					<a href="#">copyright 2015 <span style="text-decoration:underline;">campus enterprises</span></a>
+				</div>	
+			</footer>
+			</div>
+<script type="text/javascript">
+$(document).ready(function() {
+		$('#tb1').hide();
+        $('#bt1').click(function() {
+                $('#tb1').slideToggle("fast");
+        });
+        $('#tb2').hide();
+        $('#bt2').click(function() {
+                $('#tb2').slideToggle("fast");
+        });
+        $('#tb3').hide();
+        $('#bt3').click(function() {
+                $('#tb3').slideToggle("fast");
+        });
+    });
+</script>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Signup Modal</title>
+  <meta name="description" content="Remodal example">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../js/jquery.remodal.css">
+</head>
+<body>
+<div class="remodal-bg">
+  <a href="#modal2">Click</a>
+</div>
+
+<div data-remodal-id="modal2">
+  <h1>Sign up</h1>
+  <p>
+    <input type="text" placeholder="NAME">
+  </p>
+  <p>
+    <input type="text" placeholder="EMAIL">
+  </p>
+  <p>
+    <input type="password" placeholder="PASSWORD">
+  </p>
+  <p>
+    <input type="text" placeholder="PHONE #">
+  </p>
+  <p>
+    <input type="text" placeholder="ADDRESS">
+  </p>
+  <br>
+  <a class="remodal-confirm" href="#">SIGN UP</a>
+  <a class="remodal-facebook" href="#">SIGN UP WITH FACEBOOK</a>
+  <div id="terms">By signing up you agree to our <a href="#">Terms &amp; Conditions</a></div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
+<script src="../js/jquery.remodal.js"></script>
+
+<!-- Events -->
+<script>
+  $(document).on("open", ".remodal", function () {
+    console.log("open");
+  });
+
+  $(document).on("opened", ".remodal", function () {
+    console.log("opened");
+  });
+
+  $(document).on("close", ".remodal", function (e) {
+    console.log('close' + (e.reason ? ", reason: " + e.reason : ''));
+  });
+
+  $(document).on("closed", ".remodal", function (e) {
+    console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+  });
+
+  $(document).on("confirm", ".remodal", function () {
+    console.log("confirm");
+  });
+
+  $(document).on("cancel", ".remodal", function () {
+    console.log("cancel");
+  });
+ var inst = $("[data-remodal-id=modal2]").remodal();
+</script>
+</body>
+</html>

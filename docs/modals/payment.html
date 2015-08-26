@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Payment Modal</title>
+  <meta name="description" content="Remodal example">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../js/jquery.remodal.css">
+</head>
+<body>
+<div class="remodal-bg">
+  <a href="#modal2">Click</a>
+</div>
+
+<div data-remodal-id="modal2">
+  <h1>Place order</h1>
+    <div class="section group">
+      <div class="col span_1_of_3">
+        <span id="step">1. DETAILS</span>
+      </div>
+      <div class="col span_1_of_3">
+        <span id="stepCurrent">2. PAYMENT</span>
+      </div>
+      <div class="col span_1_of_3">
+        <span id="step">3. CONFIRM</span>
+      </div>
+    </div>
+  <p>
+    <input type="text" placeholder="DUKE CARD #">
+  </p>
+  <p>
+    - OR -
+  </p>
+  <p>
+    <input type="text" placeholder="CARD #">
+  </p>
+  <p>
+    <input type="text" placeholder="EXP. 01/1111">
+  </p>
+  <p>
+    <input type="text" placeholder="CVV #">
+  </p>
+  <p>
+    <input type="text" placeholder="ADDRESS">
+  </p>
+  <br>
+  <a class="remodal-confirm" href="#">NEXT</a>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../js/jquery.min.js"><\/script>')</script>
+<script src="../../js/jquery.remodal.js"></script>
+
+<!-- Events -->
+<script>
+  $(document).on("open", ".remodal", function () {
+    console.log("open");
+  });
+
+  $(document).on("opened", ".remodal", function () {
+    console.log("opened");
+  });
+
+  $(document).on("close", ".remodal", function (e) {
+    console.log('close' + (e.reason ? ", reason: " + e.reason : ''));
+  });
+
+  $(document).on("closed", ".remodal", function (e) {
+    console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+  });
+
+  $(document).on("confirm", ".remodal", function () {
+    console.log("confirm");
+  });
+
+  $(document).on("cancel", ".remodal", function () {
+    console.log("cancel");
+  });
+ var inst = $("[data-remodal-id=modal2]").remodal();
+</script>
+</body>
+</html>

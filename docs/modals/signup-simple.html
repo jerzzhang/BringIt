@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<form id="signup-form" method="POST" action="../../includes/accounts/signup-exec.php">
+    <div data-remodal-id="modal2">
+        <h1>Sign up</h1>
+        <p>
+            <input type="text" name="name" placeholder="NAME">
+        </p>
+        <p>
+            <input type="text" name="email" placeholder="EMAIL">
+        </p>
+        <p>
+            <input type="text" name="password" placeholder="PASSWORD">
+        </p>
+        <p>
+            <input type="text" name="phone" placeholder="PHONE #">
+        </p>
+        <p>
+            <input type="text" name="address" placeholder="ADDRESS">
+        </p>
+        <br>
+        <a class="remodal-confirm" id="signup-submit" >SIGN UP</a>
+        <a class="remodal-facebook" href="#">SIGN UP WITH FACEBOOK</a>
+        <div id="terms">By signing up you agree to our <a href="#">Terms &amp; Conditions</a></div>
+    </div>
+</form>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../js/jquery.min.js"><\/script>')</script>
+<script>
+    $("#signup-submit").click(function(){
+        $("#signup-form").submit();
+    })
+
+            </script>
+
+</body>
+</html>

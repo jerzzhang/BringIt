@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Signup Modal</title>
+  <meta name="description" content="Remodal example">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../js/jquery.remodal.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="remodal-bg">
+  <a href="#modal2">Click</a>
+</div>
+
+<div data-remodal-id="modal2">
+	<h1>Category Name</h1>
+	<h2 id="subcat-cover-label">Cover photo</h2>
+	<form action="demo_form.asp" id="subcat-cover-form">
+  		<input id="subcat-cover" type="file" name="pic" accept="image/*">
+	</form>
+	<div id="subcat-con">
+		<div id="general-info" style="text-align: left;">General Info</div>
+		<input id="subcat-name" type="text" placeholder="Name">
+		<input id="subcat-hours" type="text" placeholder="Hours">
+		<input id="subcat-type" type="text" placeholder="Type">
+		<input id="subcat-hours2" type="text" placeholder="Hours (second line)">
+		<div id="general-info" style="text-align: left;">Payment Type</div>
+		<div class="section group">
+		<br>
+			<div class="col span_1_of_2">
+				<input type="checkbox" id="points" name="points">
+				<label for="points">Food Points</label>
+			</div>
+			<div class="col span_1_of_2">
+				<input type="checkbox" id="invoice" name="invoice">
+				<label for="invoice">Invoicing</label>
+			</div>
+		</div>
+		<div id="general-info" style="text-align: left;">Menu</div>
+		<div id="apps-con">
+			<div id="subcat-menu-del">x</div><div id="subcat-menu-item">Appetizers</div>
+			<div id="subcat-menu-del">x</div><div id="subcat-menu-item">Entrees</div>
+			<div id="subcat-menu-del">x</div><div id="subcat-menu-item">Desserts</div>
+			<div id="subcat-menu-del">x</div><div id="subcat-menu-add">+ Add list item</div>
+		</div>
+		<div id="items-con">
+			X Items go here
+		</div>
+	</div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
+<script src="../js/jquery.remodal.js"></script>
+
+<!-- Events -->
+<script>
+  $(document).on("open", ".remodal", function () {
+    console.log("open");
+  });
+
+  $(document).on("opened", ".remodal", function () {
+    console.log("opened");
+  });
+
+  $(document).on("close", ".remodal", function (e) {
+    console.log('close' + (e.reason ? ", reason: " + e.reason : ''));
+  });
+
+  $(document).on("closed", ".remodal", function (e) {
+    console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+  });
+
+  $(document).on("confirm", ".remodal", function () {
+    console.log("confirm");
+  });
+
+  $(document).on("cancel", ".remodal", function () {
+    console.log("cancel");
+  });
+ var inst = $("[data-remodal-id=modal2]").remodal();
+</script>
+</body>
+</html>

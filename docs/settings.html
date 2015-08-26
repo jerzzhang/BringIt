@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="../css/ie/html5shiv.js"></script><![endif]-->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery.scrolly.min.js"></script>
+		<script src="../js/skel.min.js"></script>
+		<script src="../js/skel-layers.min.js"></script>
+		<script src="../js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="../css/skel.css" />
+			<link rel="stylesheet" href="../css/admin.css" />
+			<link rel="stylesheet" href="../css/style-xlarge.css" />
+		</noscript>
+		<link rel="stylesheet" type="text/css" href="../assets/css/paymentInfo.css">
+		<!--[if lte IE 9]><link rel="stylesheet" href="../css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header-admin">
+				<h1><a href="index.html">OneStop</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a class="admin-name" href="#">Welcome, Rahim!</a></li>
+						<li class="special">
+							<a href="#" id="my-favorites-button" class="skel-layers-include" data-action="toggleLayer" data-args="menuPanel">Favorite Orders</a>
+							<div id="menuPanel-content">
+								<table class="alt">
+								<thead>
+									<tr>
+										<th>&nbsp;</th>
+										<th>Service</th>
+										<th>Item Name</th>
+										<th>Price</th>
+										<th>Quantity</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>x</td>
+										<td>Food Factory</td>
+										<td>Food Choice</td>
+										<td>29.99</td>
+										<td>
+											<form id='myform' method='POST' action='#'>
+												<input type='button' value='-' class='qtyminus' field='quantity'>
+    											<input type='text' name='quantity' value='0' class='qty'>
+    											<input type='button' value='+' class='qtyplus' field='quantity'>
+											</form>
+										</td>
+									</tr>
+								</tbody>
+								</table>
+								<ul class="actions vertical">
+									<li><a href="#" class="button place">Place Order</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<div id="orderContainer">
+				<div id="adminItems">
+					<div id="adminSelections">
+						<ul>
+							<li>History</li>
+							<li>settings</li>
+						</ul>
+					</div>
+				</div>
+				<div id="adminPanel">
+					<div id="admin-restaurants">
+						<span id="restaurant-title">Account</span>
+					</div>
+					<br><br>
+					<div id="user-details">
+						<form>
+							<legend>User Information</legend>
+							<input type="text" id="account-firstname" placeholder="Jason">
+							<input type="text" id="account-lastname" placeholder="Hamilton">
+							<input type="text" id="account-email" placeholder="me@jason.sx">
+							<input class="account-submit" type="submit" value="Save">
+						</form>
+					</div>
+					<div id="card-details">
+						<form>
+							<fieldset class="credit-card-group">
+								<legend>Credit Card Information</legend>
+								<label for="card-number">Credit Card Number</label>
+								<input placeholder="1234 5678 9012 3456" pattern="[0-9]*" type="text" class="card-number" id="card-number">
+								<label for="card-number">Expiration Date</label>
+								<input placeholder="MM/YY" pattern="[0-9]*" type="text" class="card-expiration" id="card-expiration">
+								<label for="card-number">CVV Number</label>
+								<input placeholder="CVV" pattern="[0-9]*" type="text" class="card-cvv" id="card-cvv">
+								<label for="card-number">Billing Zip Code</label>
+								<input placeholder="ZIP" pattern="[0-9]*" type="text" class="card-zip" id="card-zip">
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			<footer>
+				<div id="footerLinks">
+					<a href="#">about</a>
+					<a href="#">terms</a>
+					<a href="#">help</a>
+					<a href="#">jobs</a>
+					<a href="#">press</a>
+				</div>
+				<div id="footerCopyright">
+					<a href="#">copyright 2015 <span style="text-decoration:underline;">campus enterprises</span></a>
+				</div>	
+			</footer>
+			</div>
+<script type="text/javascript">
+$(document).ready(function() {
+		$('#tb1').hide();
+        $('#bt1').click(function() {
+                $('#tb1').slideToggle("fast");
+        });
+        $('#tb2').hide();
+        $('#bt2').click(function() {
+                $('#tb2').slideToggle("fast");
+        });
+        $('#tb3').hide();
+        $('#bt3').click(function() {
+                $('#tb3').slideToggle("fast");
+        });
+    });
+</script>
+<script src="../assets/scripts/libs/jquery.inputmask.js"></script>
+<script src="../assets/scripts/libs/jquery.inputmask.date.extensions.js"></script>
+<script src="../assets/scripts/app.js"></script>
+<script>
+jQuery(document).ready(function(){
+    // This button will increment the value
+    $('.qtyplus').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If is not undefined
+        if (!isNaN(currentVal)) {
+            // Increment
+            $('input[name='+fieldName+']').val(currentVal + 1);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(0);
+        }
+    });
+    // This button will decrement the value till 0
+    $(".qtyminus").click(function(e) {
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If it isn't undefined or its greater than 0
+        if (!isNaN(currentVal) && currentVal > 0) {
+            // Decrement one
+            $('input[name='+fieldName+']').val(currentVal - 1);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(0);
+        }
+    });
+});
+</script>
+	</body>
+</html>

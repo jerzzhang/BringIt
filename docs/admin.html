@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="../css/ie/html5shiv.js"></script><![endif]-->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery.scrolly.min.js"></script>
+		<script src="../js/skel.min.js"></script>
+		<script src="../js/skel-layers.min.js"></script>
+		<script src="../js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="../css/skel.css" />
+			<link rel="stylesheet" href="../css/admin.css" />
+			<link rel="stylesheet" href="../css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="../css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header-admin">
+				<h1><a href="index.html">OneStop</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a class="admin-name" href="#">Welcome, Rahim!</a></li>
+						<li class="special">
+							<a href="#" class="skel-layers-include icon fa-shopping-cart" data-action="toggleLayer" data-args="menuPanel"></a>
+							<div id="menuPanel-content">
+								<table class="alt">
+								<thead>
+									<tr>
+										<th>Item Name</th>
+										<th>Quantity</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Food Choice</td>
+										<td>x1</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Food Choice</td>
+										<td>x1</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Food Choice</td>
+										<td>x1</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Food Choice</td>
+										<td>x1</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Food Choice</td>
+										<td>x1</td>
+										<td>29.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+								</table>
+								<ul class="actions vertical">
+									<li><a href="#" class="button fit">Checkout</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<div id="orderContainer">
+			<div id="admin-switch" class="section group">
+						<div id="switch-left" class="col span_1_of_2">
+							<span id="switch-underline">admin view</span>
+						</div>
+						<div id="switch-right" class="col span_1_of_2">
+							<span id="switch-underline">customer view</span>
+						</div>
+					</div>
+				<div id="adminItems">
+					<div id="adminSelections">
+						<ul>
+							<li>order feed</li>
+							<li>accounts</li>
+							<li>schedule</li>
+							<li>services</li>
+							<li>analytics</li>
+							<li>settings</li>
+						</ul>
+					</div>
+				</div>
+				<div id="adminPanel">
+					<!--<div id="admin-restaurants">-->
+						<!--<span id="restaurant-title">Restaurants</span>-->
+					<!--</div>-->
+					<div id="admin-bar">
+                        <div id="date-select">
+                            <select>
+                                <option value="1">Today</option>
+                                <option value="2">Yesterday</option>
+                                <option value="3">Two days ago</option>
+                                <option value="4">Three days ago</option>
+                            </select>
+                        </div>
+                        <div id="service-select">
+                            <select>
+                                <option value="1">Change Service</option>
+                                <option value="2">Restaurants</option>
+                                <option value="3">Groceries</option>
+                                <option value="4">Cleaning</option>
+                            </select>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; then
+						<div id="filter-select">
+						<select>
+  							<option value="1">Filter by restaurant</option>
+  							<option value="2">Filter by time</option>
+  							<option value="3">Filter by campus</option>
+						    </select>
+					    </div>
+                        <div id="choose-select">
+                            <select>
+                                <option value="1">Choose restaurant</option>
+                                <option value="2">Restaurants</option>
+                                <option value="3">Groceries</option>
+                                <option value="4">Cleaning</option>
+                            </select>
+                        </div>
+					</div>
+					<div id="order-feed">
+					<div id="order-info">
+						<div id="order-time">9:33PM</div>
+						<div id="order-restaurant">TGI FRIDAYS</div>
+						<div id="order-name">Callie Mao<br>callie.mao@duke.edu<br>858-111-2222</div>
+						<div id="order-address">West Campus<br>101 Duke Avenue<br>Durham, NC<br>27708</div>
+						<div id="order-items">Quarter-pound cheeseburger<br>mixed salad</div>
+						<div id="order-total"><span id="pretotal">TOTAL </span> $18.00</div>
+						<br><br>
+					</div>
+					<div id="order-info">
+						<div id="order-time">9:33PM</div>
+						<div id="order-restaurant">TGI FRIDAYS</div>
+						<div id="order-name">Callie Mao<br>callie.mao@duke.edu<br>858-111-2222</div>
+						<div id="order-address">West Campus<br>101 Duke Avenue<br>Durham, NC<br>27708</div>
+						<div id="order-items">Quarter-pound cheeseburger<br>mixed salad</div>
+						<div id="order-total"><span id="pretotal">TOTAL </span> $18.00</div>
+						<br><br>
+					</div>
+					<div id="order-info">
+						<div id="order-time">9:33PM</div>
+						<div id="order-restaurant">TGI FRIDAYS</div>
+						<div id="order-name">Callie Mao<br>callie.mao@duke.edu<br>858-111-2222</div>
+						<div id="order-address">West Campus<br>101 Duke Avenue<br>Durham, NC<br>27708</div>
+						<div id="order-items">Quarter-pound cheeseburger<br>mixed salad</div>
+						<div id="order-total"><span id="pretotal">TOTAL </span> $18.00</div>
+						<br><br>
+					</div>
+					<div id="order-info">
+						<div id="order-time">9:33PM</div>
+						<div id="order-restaurant">TGI FRIDAYS</div>
+						<div id="order-name">Callie Mao<br>callie.mao@duke.edu<br>858-111-2222</div>
+						<div id="order-address">West Campus<br>101 Duke Avenue<br>Durham, NC<br>27708</div>
+						<div id="order-items">Quarter-pound cheeseburger<br>mixed salad</div>
+						<div id="order-total"><span id="pretotal">TOTAL </span> $18.00</div>
+						<br><br>
+					</div>
+					</div>
+				</div>
+			<footer>
+				<div id="footerLinks">
+					<a href="#">about</a>
+					<a href="#">terms</a>
+					<a href="#">help</a>
+					<a href="#">jobs</a>
+					<a href="#">press</a>
+				</div>
+				<div id="footerCopyright">
+					<a href="#">copyright 2015 <span style="text-decoration:underline;">campus enterprises</span></a>
+				</div>	
+			</footer>
+			</div>
+<script type="text/javascript">
+$(document).ready(function() {
+		$('#tb1').hide();
+        $('#bt1').click(function() {
+                $('#tb1').slideToggle("fast");
+        });
+        $('#tb2').hide();
+        $('#bt2').click(function() {
+                $('#tb2').slideToggle("fast");
+        });
+        $('#tb3').hide();
+        $('#bt3').click(function() {
+                $('#tb3').slideToggle("fast");
+        });
+    });
+</script>
+	</body>
+</html>
